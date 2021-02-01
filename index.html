@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="menu">
+	<h1>Weather App</h1>
+	<p>This app will check current weather based on your geolocation, you can also search for weather based on cities around the world.</p>
+	<button id="start">Start</button>
+	<p>Powered by <a href="https://openweathermap.org/">OpenWeatherMap</a></p>
+    </div>
+    <div class="app-container">
+	<div class="search-container">
+    	    <form class="search-container">
+	        <input type="text" placeholder="Search City...">
+	        <button id="locate-search" type="submit"><i class="fas fa-search"></i></button>
+    	    </form>
+	    <button id="locate-user">Locate yourself</button>
+        </div>
+    </div>
+    <footer>
+	<p><a href="#"><i class="fab fa-github"></i></a></p>
+    </footer>
+</body>
+</html>
