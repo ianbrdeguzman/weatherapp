@@ -5,3 +5,4 @@ Check it out [here!](https://ianbrdeguzman.github.io/weatherapp/)
 * CSS3
 * JavaScript
 * OpenWeatherMap API
+* Unsplash API

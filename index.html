@@ -11,22 +11,20 @@
 </head>
 <body>
     <div class="menu">
-	<h1>Weather App</h1>
-	<p>This app will check current weather based on your geolocation, you can also search for weather based on cities around the world.</p>
-	<button id="start">Start</button>
-	<p>Powered by <a href="https://openweathermap.org/">OpenWeatherMap</a></p>
+	    <h1>Weather App</h1>
+	    <p>This app will check current weather based on your geolocation, you can also search for weather based on cities around the world.</p>
+        <p>This app uses<a href="https://openweathermap.org/api" target="_blank"><br>OpenWeatherMap API</a><br>&<br><a href="">Unsplash API</a></p>
+        <button id="locate-user"><i class="fas fa-map-marker-alt"></i> Weather Here</button>
+	    <!-- <p>Powered by <a href="https://openweathermap.org/">OpenWeatherMap</a></p> -->
     </div>
     <div class="app-container">
-	<div class="search-container">
-    	    <form class="search-container">
-	        <input type="text" placeholder="Search City...">
-	        <button id="locate-search" type="submit"><i class="fas fa-search"></i></button>
-    	    </form>
-	    <button id="locate-user">Locate yourself</button>
-        </div>
+        <form class="search-container">
+            <input type="text" placeholder="Search City...">
+            <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
+        </form>
     </div>
     <footer>
-	<p><a href="https://github.com/ianbrdeguzman/weatherapp"><i class="fab fa-github"></i></a></p>
+        <p><a href="https://github.com/ianbrdeguzman/weatherapp">View my code <i class="fab fa-github-square"></i></a></p>
     </footer>
 </body>
 </html>

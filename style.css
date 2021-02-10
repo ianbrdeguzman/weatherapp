@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-    font-family: monospace;
+    font-family: 'Roboto', sans-serif;
     color: #272727; 	
     width: 100vw;
     height: 100vh;
@@ -19,7 +21,7 @@ body {
 .menu {
     width: 100vw;
     max-width: 300px;
-    height: 400px;
+    height: 480px;
     text-align: center;
     padding: 1rem;
     background-color: white;
@@ -33,37 +35,51 @@ body {
     z-index: 1;
 }
 
+.menu h1 {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
 .menu p {
-    margin: 1rem 0;
     line-height: 2;
 }
 
 .menu button {
     cursor: pointer;
+    margin: 1rem;
     padding: 0.5rem 1rem;
-    text-transform: uppercase;
     border: none;
-    border-radius: 1rem;
     font-family: inherit;
-    background-color: #ffcfdf;
-    background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     outline: none;
 }
 
-.menu h1 {
-    font-size: 2rem;
+.menu p:last-child {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.menu p:last-child a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu p:last-child a i {
+    font-size: 1.5rem;
 }
 
 .app-container {
     width: 100vw;
     max-width: 300px;
-    height: 400px;
+    height: 480px;
     text-align: center;
-    padding: 1rem;
-    background-color: white;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -72,20 +88,29 @@ body {
 }
 
 .search-container {
-    position: relative;
+    position: absolute;
+    top: .5rem;
 }
 
 .search-container input {
-    width: 100%;
-    padding: 0.5rem 2rem 0.5rem 1rem;
-    border: none;
+    color: white;
     font-family: inherit;
-    border-radius: 1rem;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem .5rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    font-family: inherit;
     outline: none;
 }
 
-#locate-search {
+::placeholder {
+    font-family: inherit;
+    color: white;
+}
+
+#search-button {
+    color: white;
     position: absolute;
     top: 0.6rem;
     right: 1rem;
@@ -94,63 +119,72 @@ body {
     cursor: pointer;
 }
 
-#back,
-#locate-user {
-    cursor: pointer;
-    font-family: inherit;
-    margin: 1rem 0;
+.weather-container {
+    color: white;
     width: 100%;
-    padding: 0.5rem 1rem;
-    border: none;
+    height: 100%;
     border-radius: 1rem;
-    background-color: #ffcfdf;
-    background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.geo,
-.temp,
-.sun {
+.weather-container .geo,
+.weather-container .temp,
+.weather-container .sun {
+    margin: .5rem 0;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.geo > *,
-.temp > *,
-.sun > * {
+.weather-container .geo > *,
+.weather-container .temp > *,
+.weather-container .sun > * {
     margin: 0 1rem;
 }
 
-#city {
-    font-size: 2rem;
+.weather-container #city {
+    margin-top: 2rem;
+    font-size: 2.5rem;
 }
 
-#temp {
-    font-size: 4rem;
+.weather-container #temp {
+    font-size: 5rem;
 }
 
-span {
-    font-size: 1rem;
+.weather-container span {
+    cursor: pointer;
 }
 
-img {
-    width: 100px;
-    height: 100px;
+.weather-container img {
+    width: 80px;
+}
+
+#attribution {
+    font-size: 0.5rem;
+    position: absolute;
+    bottom: 0.5rem;
+}
+
+#attribution p a {
+    color: white;
 }
 
 footer {
     position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1rem;
-    padding: .5rem;
-    background-color: white;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    bottom: .5rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 footer p a {
+    text-decoration: none;
     color: #272727;
+}
+
+footer p a i {
+    font-size: 1.5rem;
 }
