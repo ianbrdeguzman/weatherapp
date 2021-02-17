@@ -11,8 +11,7 @@ body {
     color: #272727; 	
     width: 100vw;
     height: 100vh;
-    background-color: #b8c6db;
-    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    background-color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,19 +19,17 @@ body {
 
 .menu {
     width: 100vw;
-    max-width: 300px;
-    height: 480px;
+    height: 100vh;
     text-align: center;
     padding: 1rem;
-    background-color: white;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     z-index: 1;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
 .menu h1 {
@@ -42,16 +39,18 @@ body {
 
 .menu p {
     line-height: 2;
+    padding: 2rem;
 }
 
 .menu button {
     cursor: pointer;
+    color: #ffffff;
     margin: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     border: none;
     font-family: inherit;
-    background-color: #b8c6db;
-    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    background-color: #9e8fb2;
+    background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
     outline: none;
 }
 
@@ -71,11 +70,8 @@ body {
 
 .app-container {
     width: 100vw;
-    max-width: 300px;
-    height: 480px;
+    height: 100vh;
     text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 1rem;
     background: rgba(0, 0, 0, 0.7);
     background-position: center;
     background-size: cover;
@@ -119,6 +115,14 @@ body {
     cursor: pointer;
 }
 
+.app-container > p {
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
 .weather-container {
     color: white;
     width: 100%;
@@ -155,36 +159,29 @@ body {
     font-size: 5rem;
 }
 
-.weather-container span {
-    cursor: pointer;
-}
-
 .weather-container img {
     width: 80px;
 }
 
 #attribution {
-    font-size: 0.5rem;
     position: absolute;
     bottom: 0.5rem;
 }
 
-#attribution p a {
+#attribution a {
     color: white;
 }
 
 footer {
     position: absolute;
-    bottom: .5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: .5rem;
 }
 
 footer p a {
+    font-size: 2rem;
     text-decoration: none;
     color: #272727;
-}
-
-footer p a i {
-    font-size: 1.5rem;
 }

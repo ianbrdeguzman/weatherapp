@@ -224,6 +224,7 @@ const displayWeather = () => {
     <input type="text" placeholder="Search City...">
     <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
   </form>
+  <p><span id="celsius">&#176;C</span> | <span id="fahrenheit">&#176;F</span></p>
   <div class="weather-container">
 	  <p id="city">${weather.city}</p>
     <!-- <div class="geo">
@@ -245,7 +246,6 @@ const displayWeather = () => {
 	    <p>Sunrise<br>${weather.sunrise}am</p>
 	    <p>Sunset<br>${weather.sunset}pm</p>
 	  </div>
-    <p><span id="celsius">&#176;C</span> | <span id="fahrenheit">&#176;F</span></p>
     <p id="attribution">Photo by <a href="https://unsplash.com/@${image.username}?utm_source=your_app_name&utm_medium=referral">${image.name}</a> on <a href="https://unsplash.com/?utm_source=your_app_name&utm_medium=referral">Unsplash</a>
   </div>
 	`;
@@ -254,22 +254,6 @@ const displayWeather = () => {
   container.insertAdjacentHTML('beforeend', item);
   // change background image
   container.style.backgroundImage = `url(${image.url})`;
-};
-
-// function to create new weather
-function Weather(iconURL, city, lat, lon, date, temp, minTemp, maxTemp, feelsLike, sunrise, sunset, weather) {
-  this.iconURL = iconURL;
-  this.city = city;
-  this.lat = lat;
-  this.lon = lon;
-  this.date = date;
-  this.temp = temp;
-  this.minTemp = minTemp;
-  this.maxTemp = maxTemp;
-  this.feelsLike = feelsLike;
-  this.sunrise = sunrise;
-  this.sunset = sunset;
-  this.weather = weather;
 };
 
 // add form event listener
@@ -307,6 +291,7 @@ document.addEventListener('click', (e) => {
 
   // if id is locate-user
   if(e.target.id === 'locate-user') {
+    document.querySelector('#github').style.color = '#ffffff';
     geoLocate();
     hideMenu();
   }
